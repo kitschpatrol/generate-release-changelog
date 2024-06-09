@@ -1,11 +1,18 @@
+Unmodified fork of [Bullrich/generate-release-changelog](https://github.com/bullrich/generate-release-changelog).
+
+Original readme below:
+
+---
+
 # generate-changelog-action
 
-GitHub Action for generating a changelog of all the git commits between the new tag and the latest tags. 
+GitHub Action for generating a changelog of all the git commits between the new tag and the latest tags.
 
-Based on [ScottBrenner/generate-changelog-action](https://github.com/ScottBrenner/generate-changelog-action). 
+Based on [ScottBrenner/generate-changelog-action](https://github.com/ScottBrenner/generate-changelog-action).
 Intended to be used with [actions/create-release](https://github.com/actions/create-release).
 
 ## Example workflow - create a release
+
 Extends [actions/create-release: Example workflow - create a release](https://github.com/actions/create-release#example-workflow---create-a-release) to generate changelog from git commits and use it as the body for the GitHub release.
 
 ```yaml
@@ -14,8 +21,8 @@ name: Create Release
 on:
   push:
     tags:
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
-  
+      - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
+
 jobs:
   build:
     name: Create Release
@@ -48,4 +55,3 @@ The above workflow will create a release that looks like:
 ![Release](release.png)
 
 For more information, see [actions/create-release: Usage](https://github.com/actions/create-release#usage).
-
